@@ -1,0 +1,40 @@
+profile: full
+ceip_policy_disclosed: true
+shared:
+  ingress_domain: "full.tap.nycpivot.com"
+supply_chain: basic
+ootb_supply_chain_basic:
+  registry:
+    server: 964978768106.dkr.ecr.us-east-1.amazonaws.com
+    repository: "tanzu-application-platform"
+buildservice:
+  kp_default_repository: 964978768106.dkr.ecr.us-east-1.amazonaws.com/tap-build-service
+  kp_default_repository_aws_iam_role_arn: "arn:aws:iam::964978768106:role/tap-build-service"
+contour:
+  infrastructure_provider: aws
+  envoy:
+    service:
+      aws:
+        LBType: nlb
+ootb_templates:
+  iaas_auth: true
+tap_gui:
+  service_type: LoadBalancer
+  app_config:
+    catalog:
+      locations:
+        - type: url
+          target: https://github.com/nycpivot/tanzu-application-platform/catalog-info.yaml
+metadata_store:
+  ns_for_export_app_cert: "default"
+  app_service_type: LoadBalancer
+scanning:
+  metadataStore:
+    url: ""
+grype:
+  namespace: "default"
+  targetImagePullSecret: "registry-credentials"
+cnrs:
+  domain_name: full.tap.nycpivot.com
+excluded_packages:
+  - policy.apps.tanzu.vmware.com
