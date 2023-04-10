@@ -1,15 +1,15 @@
 {
-    "Comment": "Update IP address.",
+    "Comment": "Update record.",
     "Changes": [
         {
             "Action": "UPSERT",
             "ResourceRecordSet": {
                 "Name": "*.full.tap.nycpivot.com",
-                "Type": "A",
+                "Type": "CNAME",
                 "TTL": 60,
                 "ResourceRecords": [
                     {
-                        "Value": "34.192.161.227"
+                        "Value": "ae5dd825631c843f9bea141311da308b-29e326f0d82d3cb6.elb.us-east-1.amazonaws.com"
                     }
                 ]
             }
