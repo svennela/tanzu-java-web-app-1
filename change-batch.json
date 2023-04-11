@@ -9,7 +9,7 @@
                 "TTL": 60,
                 "ResourceRecords": [
                     {
-                        "Value": "ae5dd825631c843f9bea141311da308b-29e326f0d82d3cb6.elb.us-east-1.amazonaws.com"
+                        "Value": "a0353dea3e5174f0b850442a551c8e52-c45f92f03ace84a1.elb.us-east-1.amazonaws.com"
                     }
                 ]
             }
