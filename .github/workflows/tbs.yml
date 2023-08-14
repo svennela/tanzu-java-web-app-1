@@ -18,7 +18,7 @@ jobs:
         server: ${{ secrets.SERVER }}
         token: ${{ secrets.TOKEN }}
         ca_cert: ${{ secrets.CA_CERT }}
-        namespace: default
+        namespace: dev
         # Image configuration
         destination: supply-chain/tanzu-java-web-app-default-bundle/workloads/spring-boot-hello-world
     - name: Do something with image
