@@ -19,6 +19,8 @@ jobs:
         token: ${{ secrets.TOKEN }}
         ca_cert: ${{ secrets.CA_CERT }}
         namespace: dev
+        serviceAccountName: github-actions
+        clusterBuilder: github-actions
         # Image configuration
         destination: supply-chain/tanzu-java-web-app-default-bundle/workloads/spring-boot-hello-world
     - name: Do something with image
